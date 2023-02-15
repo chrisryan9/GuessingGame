@@ -23,6 +23,11 @@ public class GuessingGame {
 
             attempts += 1;
 
+            if (guess < 1 || guess > 100) {
+                System.out.println(guess + " is not a valid number, try again");
+                continue;
+            }
+
             if (guess < number) {
                 System.out.println("\nYour guess is too low, try again!");
             } else if (guess > number) {
